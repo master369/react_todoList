@@ -1,0 +1,28 @@
+$primaryColor: #616465;
+.spoiler {
+    transition: transform 150ms ease;
+    .open {
+        transform: rotate(90deg);
+    }
+}
+
+.category-list{
+    display:flex;
+    flex-flow: column;
+
+    &__item{
+        flex: 0 1 auto;
+        cursor: pointer;
+        padding: 15px;
+        border:1px solid $primaryColor;
+        border-radius: 5px;
+        margin: 2px 0;
+
+        &.selected{
+            background-color: rgba($primaryColor, 0.4);
+        }
+        &:hover{
+            background-color: rgba($primaryColor, 0.2);
+        }
+    }
+}
